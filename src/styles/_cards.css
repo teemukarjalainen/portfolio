@@ -14,6 +14,10 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+.academia {
+    border-left: 6px solid #517ea4 !important;
+}
+
 .card-content {
     margin-bottom: 1rem;
 }
@@ -23,6 +27,10 @@
     font-weight: bold;
     margin: 0 0 0.5rem;
     color: #2f5d50;
+}
+
+.title-academia {
+    color: #517ea4 !important;
 }
 
 .company {

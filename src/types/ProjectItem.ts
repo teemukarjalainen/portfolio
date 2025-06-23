@@ -5,4 +5,5 @@ export interface ProjectItem {
     endDate: string; // ISO date string yyyy-mm-dd
     link?: string;
     company?: string;
+    academia?: boolean;
 }

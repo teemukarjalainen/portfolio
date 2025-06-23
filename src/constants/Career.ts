@@ -61,5 +61,14 @@ export const careers: CareerItem[] = [
         startDate: '2021-09-01',
         endDate: 'Present',
         company: 'Sofia Digital'
+    },
+    {
+        title: "Bachelor's degree, Information Technology",
+        description: `Degree as Bachelor of Engineering in the field of Information Technology, software development.
+            Other activities: Tutor-student 2016`,
+        startDate: '2015-08-01',
+        endDate: '2019-06-01',
+        company: 'Oulu University of Applied Sciences (OAMK)',
+        academia: true
     }
 ];

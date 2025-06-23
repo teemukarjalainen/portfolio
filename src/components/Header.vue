@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import Image from './Image.vue';
     const name: string = 'Teemu Karjalainen';
-    const title: string = 'Versatile Software Engineer';
-    const slogan: string = 'From game loops to memory leaks, I’ve shipped code that matters.';
+    const title: string = 'Frontend Developer with Backend Ambition';
+    const slogan: string = 'From bug hunts to feature launches — Shipping code that makes a difference.';
     const linkedin: string = 'https://linkedin.com/in/teekarjalainen';
 </script>
 
@@ -67,6 +67,14 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
     .text h1 {
         font-size: 1.3rem;
         margin: 0;
@@ -76,6 +84,8 @@
         font-size: 0.95rem;
         margin: 0.25rem 0;
         opacity: 0.85;
+        white-space: normal; /* allow wrapping */
+        max-width: 168px; /* control max width */
     }
 
     .text a {
@@ -102,7 +112,7 @@
     /* Mobile responsiveness */
     @media (max-width: 1780px) {
         .header {
-            padding: 1rem;
+            padding-top: 2%;
             min-height: auto;
         }
 
@@ -121,6 +131,14 @@
 
         .profile {
             flex-direction: column;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
     }
 </style>

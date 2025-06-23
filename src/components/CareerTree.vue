@@ -12,10 +12,10 @@
         <div class="mound-label">1994</div>
         <div class="items">
             <div v-for="item in [...career].reverse()" :key="item.title + item.startDate" class="item">
-                <div class="circle"></div>
-                <div class="card career-card">
+                <div class="circle" :class="item?.academia ? 'circle-academia' : ''"></div>
+                <div class="card career-card" :class="item?.academia ? 'academia' : ''">
                     <div class="card-content">
-                        <h3 class="title">{{ item.title }}</h3>
+                        <h3 class="title" :class="item?.academia ? 'title-academia' : ''">{{ item.title }}</h3>
                         <p class="company">{{ item.company }}</p>
                         <p class="date">
                             {{ shortMonthAndYearOnly(item.startDate) }}
@@ -95,6 +95,10 @@
         z-index: 1;
     }
 
+    .circle-academia {
+        background-color: #517ea4 !important;
+    }
+
     .circle::before {
         content: '';
         position: absolute;
@@ -106,6 +110,10 @@
         transform: translateY(-50%);
         border-radius: 2px;
         z-index: 0;
+    }
+
+    .circle-academia::before {
+        background-color: #517ea4 !important;
     }
 
     /* Top node (small circle at top of trunk) */

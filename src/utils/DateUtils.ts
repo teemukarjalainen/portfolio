@@ -9,9 +9,21 @@ export function yearOnly(dateStr: string = ''): string {
 }
 
 export function shortMonthAndYearOnly(dateStr: string = ''): string {
-    if (dateStr === 'Present') return dateStr;
+    if (dateStr.toLowerCase() === 'present') return dateStr;
     const date = new Date(dateStr);
-    console.log('DATE STR: ', date);
     if (isNaN(date.getTime())) return ''; // Invalid date, fail silently
     return getMonthName(date, true) + ' ' + date.getFullYear();
+}
+
+export function getSortableDate(dateStr: string | undefined, fallbackStr?: string | undefined): number {
+    if (!dateStr) {
+        if (fallbackStr) {
+            const fallbackTime = new Date(fallbackStr).getTime();
+            return isNaN(fallbackTime) ? 0 : fallbackTime;
+        }
+        return 0;
+    }
+    if (dateStr.toLowerCase() === 'present') return Number.MAX_SAFE_INTEGER;
+    const time = new Date(dateStr).getTime();
+    return isNaN(time) ? 0 : time;
 }

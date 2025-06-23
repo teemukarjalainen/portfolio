@@ -8,9 +8,14 @@
 
 <template>
     <div class="projects-grid">
-        <div v-for="item in projects" :key="item.title + item.startDate" class="card project-card">
+        <div
+            v-for="item in projects"
+            :key="item.title + item.startDate"
+            class="card project-card"
+            :class="item?.academia ? 'academia' : ''"
+        >
             <div class="card-content">
-                <h3 class="title">{{ item.title }}</h3>
+                <h3 class="title" :class="item?.academia ? 'title-academia' : ''">{{ item.title }}</h3>
                 <p class="company">{{ item.company }}</p>
                 <p class="date">
                     {{ yearOnly(item.startDate) }}

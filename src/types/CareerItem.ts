@@ -4,4 +4,5 @@ export interface CareerItem {
     startDate?: string;
     endDate: string; // ISO date string yyyy-mm-dd
     company?: string;
+    academia?: boolean;
 }

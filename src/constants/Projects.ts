@@ -5,8 +5,8 @@ export const projects: ProjectItem[] = [
         title: 'My Portfolio',
         description:
             "Personal portfolio site built with Vue 3 showcasing the timeline of my career and projects I've been a part of.",
-        startDate: '2024',
-        endDate: '',
+        startDate: '',
+        endDate: '2024',
         link: ''
     },
     {
@@ -42,5 +42,14 @@ export const projects: ProjectItem[] = [
         endDate: '2023',
         link: 'https://sofiadigital.com/pointer-events-for-smart-tv-applications/',
         company: 'Sofia Digital'
+    },
+    {
+        title: 'Thesis',
+        description: `Thesis I did as a part of my studies at Oulu University of Applied Sciences
+        "Tuotantosuunnitelman laatiminen pienelle peliyritykselle"`,
+        startDate: '',
+        endDate: '2019',
+        link: 'https://urn.fi/URN:NBN:fi:amk-2019053113739',
+        academia: true
     }
 ];
